@@ -1,0 +1,39 @@
+/* helper style - css box model */
+.border-blue {
+    border: 1px solid blue;
+}
+
+body {
+    background-image: url("./images/table.png");
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    display: block;
+    width: 120px;
+    margin: 7px auto;
+    padding: 10px 12px;
+    background: goldenrod;
+    color: green;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #ffffff;
+}
