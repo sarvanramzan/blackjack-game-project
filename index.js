@@ -1,3 +1,18 @@
+// WHat is the objective of the JS Code: DOM Manipulation
+  // >> Message: Want to play a round ?
+      // >> Message: Do you want to draw a new card ? (sum < 21)
+      // >> Message: You have got blackjack! (sum = 21)
+      // >> Message: You are out of the game! (sum > 21)
+  // >> Cards: 6(firstcard) 9(secondcard) 8(new card)
+  // >> Sum: 23 - firstcard + secondcard + newcard
+
+  // >> DOM Manipulation with buttons (Event Listeners - "Click")
+      // Stargame btn
+      // New card btn
+
+
+
+
 // 1. Database (Firebase) - Installation & Setup in Javascript
   // a. Initialize Firebase in app - import "initializeApp(), getDatabase(), ref()"
   // b. create a Firebase App object
@@ -10,13 +25,14 @@
 let firstCard = 6;
 let secondCard = 9;
 let sum = firstCard + secondCard;
-let cards = [firstCard, secondCard]; // array
+let cards = [firstCard, secondCard];
 let messageEl = document.getElementById("message-el");
+let message = "";
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
 let startGameBtn = document.getElementById("startgame-btn");
 let newCardBtn = document.getElementById("newcard-btn");
-let message = ""; // empty string
+
 
 // Special Variable Types:
   // array - data structure that stores multiple values in a single  variable.
@@ -31,15 +47,14 @@ let message = ""; // empty string
 
 // 3. Event Listener - is a procedure or method executed when any event occurs like a "click event"
 startGameBtn.addEventListener("click", function() {
-  // invoke function
+  // invoke function to start the game
   startGame();
 })
 
 newCardBtn.addEventListener("click", function() {
-  // invoke function
+  // invoke function to output new cards
   newCard();
 })
-
 
 
 // log to the console to test code
@@ -57,7 +72,7 @@ console.log()
 
 
 // 5. log to the console to test code
-console.log(newCardBtn)
+console.log(cards)
 
 
 // 6. Best Practises

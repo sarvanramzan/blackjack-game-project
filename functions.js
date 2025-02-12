@@ -1,36 +1,41 @@
+
 // 4. functions -  block of code designed to perform a particular task when invoked
 function startGame() {
-    // invoke the function to render the game
+    // invoke function to render the game
     renderGame();
 }
 
-function renderGame() {
+function renderGame() { 
     // html dom
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardsEl.textContent = "Cards: ";
     sumEl.textContent = "Sum: " + sum;
-    // conditional statements to check if the "sum" meets the game rules
-    if (sum <= 20) {
+    // create a for loop that renders out all the itmes in the array
+    for (let i = 0; i < cards.length; i++) {
         // html dom
-        message = "Do you want to draw a new card ?";
-    } else if (sum === 21) {
-        // html dom
-        message = "You have got blackjack!";
-    } else {
-        // html dom
-        message = "You are out of the game!";
+        cardsEl.textContent += cards[i] + " ";
     }
-    // html dom
-    messageEl.textContent = message;
+    // conditional statement
+    if (sum <= 20) {
+    // reassign the message variable
+    message = "Do you want to draw a new card ?";
+  } else if (sum === 21) {
+    // reassign the message variable
+    message = "You have got BlackJack!";
+  } else {
+    // reassign the message variable
+    message = "You are out of the game!";
+  }
+  // html dom
+  messageEl.textContent = message;
 }
 
 function newCard() {
     // local variable
-    let card = 6;
-    // reasign the sum variable
+    let card = 8;
+    // reassign the sum variable
     sum += card;
-    // render the card on the html dom - push card to an array
+    // push the card to the array
     cards.push(card);
-    // invoke the function
+    // invoke the render game function to output to the DOM
     renderGame();
-    console.log(cards)
 }
