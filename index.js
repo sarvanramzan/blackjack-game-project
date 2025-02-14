@@ -1,14 +1,11 @@
-// WHat is the objective of the JS Code: DOM Manipulation
-  // >> Message: Want to play a round ?
-      // >> Message: Do you want to draw a new card ? (sum < 21)
-      // >> Message: You have got blackjack! (sum = 21)
-      // >> Message: You are out of the game! (sum > 21)
-  // >> Cards: 6(firstcard) 9(secondcard) 8(new card)
-  // >> Sum: 23 - firstcard + secondcard + newcard
+// Objective of Javascript Code: DOM Manipulation using the buttons (EventListeners)
+    // Message: Want to play a round ?
+        // message: Do you want to draw a new card ? (sum < 21)
+        // message: You have got blackjack! (sum = 21)
+        // message: You are out of the game! (sum > 21)
+    // Cards: 6(firstCard) 8(secondCard) 9(newCard)
+    // Sum: firstCard + secondCard + "newCard"
 
-  // >> DOM Manipulation with buttons (Event Listeners - "Click")
-      // Stargame btn
-      // New card btn
 
 
 
@@ -22,22 +19,23 @@
 
 
 // 2. variables - used to store data values for later use (Global Scope)
-let firstCard = 6;
-let secondCard = 9;
+let firstCard = 10;
+let secondCard = 11;
 let sum = firstCard + secondCard;
 let cards = [firstCard, secondCard];
-let messageEl = document.getElementById("message-el");
-let message = "";
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
+let messageEl = document.getElementById("message-el");
+let message = "";
 let startGameBtn = document.getElementById("startgame-btn");
 let newCardBtn = document.getElementById("newcard-btn");
 
 
-// Special Variable Types:
-  // array - data structure that stores multiple values in a single  variable.
-  // object - are variables that contain multiple data values as "key-value" pairs.
-  // boolean
+
+    // Special Variable Types:
+        // array - data structure that stores multiple values in a single  variable.
+        // object - are variables that contain multiple data values as "key-value" pairs.
+        // boolean
 
 
 //2b. localStorage API - store key-value pairs directly in a user's browser
@@ -47,14 +45,19 @@ let newCardBtn = document.getElementById("newcard-btn");
 
 // 3. Event Listener - is a procedure or method executed when any event occurs like a "click event"
 startGameBtn.addEventListener("click", function() {
-  // invoke function to start the game
-  startGame();
+    // invoke the function to output the message and card values
+    renderGame();
 })
 
 newCardBtn.addEventListener("click", function() {
-  // invoke function to output new cards
-  newCard();
+    // invoke the function to output new cards to the game
+    newCard();
 })
+
+
+// 4. functions -  block of code designed to perform a particular task when invoked
+
+
 
 
 // log to the console to test code
@@ -69,10 +72,10 @@ console.log()
 // localStorage API - store key-value pairs directly in a user's browser
 
 
-
-
 // 5. log to the console to test code
-console.log(cards)
+console.log()
+
+
 
 
 // 6. Best Practises

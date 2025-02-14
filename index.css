@@ -7,8 +7,9 @@ body {
     background-image: url("./images/table.png");
     background-size: cover;
     color: #ffffff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
     user-select: none;
 }
 
@@ -21,19 +22,20 @@ h1 {
 }
 
 button {
-    display: block;
-    width: 120px;
-    margin: 7px auto;
     padding: 10px 12px;
+    width: 150px;
+    display: block;
+    margin: 10px auto;
     background: goldenrod;
     color: green;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-family: inherit;
-    font-weight: bold;
+    font-weight: inherit;
     cursor: pointer;
 }
 
-button:hover {
-    border: 1px solid #ffffff;
+button:focus {
+    outline: 1px solid #ffffff;
 }
+
